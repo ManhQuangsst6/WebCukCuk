@@ -1,0 +1,114 @@
+.pop-up{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    display: none;
+}
+.pop-up-warning{
+    top: 10px;
+    margin: 0 auto;
+    width: 500px;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+.form{
+    position: relative;
+}
+.pop-up-warning--title{
+    padding:24px;
+}
+.pop-up-warning--content{
+    margin: 0 24px;
+    display: flex;
+    align-items: center;
+}
+.pop-up-warning--icon{
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 10px;
+}
+.pop-up-warning--text{
+    margin-right: 24px;
+}
+.pop-up-warning--text span{
+    font-weight: 900;
+}
+.pop-up--button{
+    height: 60px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #e9e9e9;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.pop-up--button .ms-btn:last-child{
+    margin-left: 16px;
+    margin-right: 24px;
+}
+.closeX{
+    right: 0;
+    top: 0;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.closeX i{
+    font-size: 24px;
+}
+.closeX:hover{
+    background-color: rgb(145, 22, 22);
+    color: #fff;
+}
+
+.pop-up-warning--title{
+    font-size: 16px;
+    font-weight:700;
+}
+.pop-up-document{
+    margin: 0 24px;
+}
+.document-name-text,.document-lenght-text,
+.date-left-text,.date-right-text{
+    margin-bottom: 4px;
+}
+.date-left,.date-right{
+    width: 46%;
+}
+.document-name,.document-lenght{
+    margin-bottom: 16px;
+}
+.document-dates{
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.document-lenght-input,.document-name-input{
+    width: 100%;
+}
+.date-left-input,.date-right-input{
+    height: 32px;
+    width: 100%;
+}
+.document-name-input,.document-lenght-input{
+    width: 100%;
+    text-indent: 10px;
+    font-size: 10px;
+    height: 32px;
+}
+input,select{
+    outline: none;
+}
+input:focus{
+    border:1px solid rgb(117, 189, 76);
+}

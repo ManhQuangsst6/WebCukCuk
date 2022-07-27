@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../../Assets/font/fontawesome-5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="../../Assets/font/fontawesome-5.15.1/js/all.min.js">
+    
+    <link rel="stylesheet" href="../../Assets/CSS/Common/Common.css">
+
+    <link rel="stylesheet" href="../../Assets/CSS/Views/Employee/cukcuk.css">
+    <link rel="stylesheet" href="../../Assets/CSS/Views/Employee/Employee.css">
+
+
+    
+</head>
+<body>
+     <main>
+        <div class="nav-bar">
+            <div class="top-nav">
+                <div class="nav-icon">
+                </div>
+                <div class="img-icon ">
+                </div>
+            </div>
+
+            <div class="menu-list">
+                <div class="menu-item">
+                    <div class=" menu-icon-0 icon">
+
+                    </div>
+                    <div class="menu-text">Tổng quan</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon-1 icon">
+
+                    </div>
+                    <div class="menu-text">Báo cáo</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon-2 icon">
+
+                    </div>
+                    <div class="menu-text">Mua hàng</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon-3 icon">
+
+                    </div>
+                    <div class="menu-text">Theo doi dong</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon-3 icon">
+
+                    </div>
+                    <div class="menu-text">Danh mục nhân viên</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-icon-4 icon">
+
+                    </div>
+                    <div class="menu-text">Thiết lập hệ thống</div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="top-content">
+                <div class="name-restaurant">
+                    <select name="" id="" class="input-select">
+                        <option value="intern">Nhà Hàng Biển Đông</option>
+                        <option value="fresher">Nhà Hàng Biển Tây</option>
+                    </select>
+                </div>
+                <div class="user">
+                        <div class="img-avata icon"></div>
+                        <div class="name-user">Dao Manh Quang</div>
+                        <div class="icon-three icon"></div>
+                </div>
+            </div>
+            
+            <div class="body-content">
+                <div class="header-body-content">
+                    <h2>Danh sách nhân viên</h2>
+                    <div id="Toolbar" >
+                        <button class="ms-btn toolbar-item button-add" CommandType="Add">
+                            <div class="ms-btn-icon"></div>
+                                Thêm Nhân Viên
+                        </button>
+                        <div class="toolbar-item Refrest" CommandType="Refrest"></div>
+                        <div class="toolbar-item Duplicate" CommandType="Duplicate"></div>
+                        <div class="toolbar-item Drop" CommandType="Drop"></div>
+    
+                    </div>
+                </div> 
+                
+                <div class="filter-staff">
+                    <div class="list-input">
+                        <div class="m-row">
+        
+                            <input type="text" id="search-input"class="ms-input" placeholder="Tim kiem theo ten hoac so dien thoai">
+                        
+                         <div class="search"></div>
+                        
+                         <div class="message-error">tên hoặc số điện thoại không hợp lệ</div>
+                         <!-- <div class="ti-remove"><i class="fas fa-times"></i></div> -->
+                        </div>
+                        <select name="" id="" class="input-select select-search department">
+                            
+                        </select>
+                        <select name="" id="" class="input-select select-search position">
+                           
+                        </select>
+                    </div>
+                </div>   
+                <div id="gridEmployee" Toolbar="Toolbar" Url="http://localhost:5086/api/v1/Employees" class="table-wrapper">
+                            <div class="col"FieldName="employeeCode">Mã nhân viên</div>
+                            <div class="col"FieldName="employeeName">Họ và tên</div>
+                            <div class="col"FieldName="gender"DataType="gender">Giới tính</div>
+                            <div class="col"FieldName="dateOfBirth" DataType="Date">Ngày sinh</div>
+                            <div class="col"FieldName="phoneNumber"> Điện thoại</div>
+                            <div class="col"FieldName="email">Email</div>
+                            <div class="col"FieldName="positionName">Chức vụ</div>
+                            <div class="col"FieldName="departmentName">Phòng ban</div>
+                            <div class="col"FieldName="salary" DataType="Number">Mức lương cơ bản</div>    
+                            <div class="col"FieldName="workStatus" DataType="work">Tình trạng công việc</div>
+    
+                </div>
+                <div class="content-navigation">
+                    <div class="navigations">
+                        <div class="arrow-two ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                                <path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"/></svg>
+                        </div>
+                        <div class="arrow-icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                    
+                        </div>
+                        <div class="navigation-item"><a href="">1</a></div>
+                        <div class="navigation-item"><a href="">2</a></div>
+                        <div class="navigation-item"><a href="">3</a></div>
+                        <div class="navigation-item"><a href="">4</a></div>
+                        <div class="arrow-icon reverse ">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                        </div>
+                        <div class="arrow-two reverse ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
+                                <path d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"/></svg>
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+     </main>
+     <div class="form-none " id="form-info">
+        <div class="form-info form" >
+            <div class="for-info-title">
+                Thông tin sinh viên
+            </div>
+            <div class="content-info">
+                <div class="content-info-left">
+                    <div class="img-avatar"></div>
+                    <div class="warning-empty-text">
+                        Vui lòng chọn ảnh có định dạng jpg,png,gif
+                    </div>
+                </div>
+                <div class="content-info-right">
+                    <div class="info-commom">
+                        A. Thông tin chung
+                    
+                      <div class="box"></div>
+                      <div class="list-infor-input">
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Mã nhân viên(<span class="red">*</span>)
+                            </div>
+                            <input id="count" Required="" SetField="employeeCode" type="text">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Họ và tên (<span class="red">*</span>)
+                            </div>
+                            <input SetField="employeeName" Required=""  type="text">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Ngày sinh
+                            </div>
+                            <input SetField="dateOfBirth" dataType="Date" type="date">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Giới tính
+                            </div>
+                            <select SetField="gender" dataType="Number" name="" id="" class="input-select ">
+                                <option value="1">Nam</option>
+                                <option value="0">Nữ</option>
+                                <option value="2">Khác</option>
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Số CMTND/Căn cước (<span class="red">*</span>)
+                            </div>
+                            <input SetField="identityNumber" Required="" type="text">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Ngày cấp
+                            </div>
+                            <input SetField="identityIssuedDate"  dataType="Date" type="date">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Nơi cấp
+                            </div>
+                            <input SetField="identityIssuedPlace" type="text">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Email(<span class="red">*</span>)
+                            </div>
+                            <input SetField="email" id="Email" Required="" type="text">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Số điện thoại(<span class="red">*</span>)
+                            </div>
+                            <input SetField="phoneNumber" Required="" type="text">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-commom">
+                        B. Thông tin công việc
+                      <div class="box"></div>
+                      <div class="list-infor-input">
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Vị trí
+                            </div>
+                            <select SetField="positionID" name="" dataType="pos"  class="input-select position">
+                                
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Phòng ban
+                            </div>
+                            <select SetField="departmentID" dataType="dep" name=""  class="input-select department">
+                              
+                            </select>
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                               Mã số thuế cá nhân
+                            </div>
+                            <input SetField="taxCode" type="text">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Mức lương cơ bản
+                            </div>
+                            <input SetField="salary" dataType="Number" type="text">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                               Ngày gia nhập công ty
+                            </div>
+                            <input SetField="joiningDate" dataType="Date" type="date">
+                        </div>
+                        <div class="input-item">
+                            <div class="title-text-input">
+                                Tình trạng công việc
+                            </div>
+                            <select SetField="workStatus" dataType="Number" name="" id="" class="input-select">
+                                <option value="0">Chưa làm việc</option>
+                                <option value="1">Đang làm việc</option>
+                                <option value="2">Không làm việc</option>
+                                <option value="3">Đã nghỉ việc</option>
+                                <option value="4">Nghỉ Hưu</option>
+                            </select>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="pop-up--button">
+               
+                <button class="ms-btn default-button button-onetext" CommandType="Close">Đóng</button>
+           
+                <button class="ms-btn button-onetext"  CommandType="Save">
+                    <div class="ms-btn-icon-save "></div>
+                        Lưu  
+                    </button>
+            </div>
+            <div class="closeX">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+     </div>
+     <div class="pop-up">
+        <div class="pop-up-warning form">
+            <div class="pop-up-warning--title">Xóa bản ghi </div>
+            
+            <div class="pop-up-warning--content">
+                <div class="pop-up-warning--icon red">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="pop-up-warning--text">Bạn có chắc chắn muốn xóa nhân viên này hay không ?
+                </div>
+            </div>
+            <div class="pop-up--button">
+               
+                    <button  class="ms-btn default-button Cannel">Không</button>
+               
+                    <button class="ms-btn " id="DeleteData">Có</button>
+                
+            </div>
+            <div class="closeX Cannel">
+                <i   class="fas fa-times "></i>
+            </div>
+        </div>
+     </div>
+     <div class="toast-messager-item">
+        <div class="toast-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="toast-text">
+            Xóa bản ghi thành công
+        </div>
+        <div class="toast-remove">
+            <i class="fas fa-times"></i>
+        </div>
+    </div>
+</body>
+<script src="../../Script/Common/jquery-3.6.0.min.js"></script>
+<script src="../../Script/Common/Common.js"></script>
+<script src="../../Script/Common/Enumeration.js"></script>
+<script src="../../Script/Common/Resource.js"></script>
+
+<script src="../../Script/Views/Position/position.js"></script>
+<script src="../../Script/Views/Department/department.js"></script>
+<script src="../../Script/Views/Empoyee/EmployeeDetail.js"></script>
+<script src="../../Script/Views/Empoyee/Employee.js"></script>
+</html>

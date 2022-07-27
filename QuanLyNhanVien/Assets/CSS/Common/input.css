@@ -1,0 +1,78 @@
+
+.ms-input{
+    height: 36px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+.ms-input:focus{
+    border-color: #019169;
+}
+.ms-input{
+    text-indent: 36px;
+    width: 100%;
+}
+.search{
+    position: absolute;
+    background-image: url(../../../Assets/icon/search.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    left: 12px;
+}
+.message-error{
+    position: absolute;
+    width: 160px;
+    height: 60px;
+    background-color: rgb(199, 11, 11);
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    color: #fff;
+    font-size: 12px;
+    font-family: GoogleSans-Italic;
+    padding: 0 12px;
+    bottom: 102%;
+    left: calc(50% - 92px);
+    display: none;
+}
+.message-error::after{
+    content: "";
+    border-top: 10px solid rgb(199, 11, 11);
+    border-right: 10px solid rgb(199, 11, 11);
+    position: absolute;
+    bottom: -6%;
+    left: calc(50% - 5px);
+    transform: rotate(45deg);
+    display: none;
+}
+
+
+.ti-remove{
+    position: absolute;
+   
+    right: 8px;
+    padding:0 4px ;
+    border-radius: 50%;
+    background-color: #bbb;
+}
+.ti-remove i{
+    color:rgb(231, 58, 58) ;
+}
+.ti-remove:hover{
+    background-color: rgb(160, 153, 153);
+    cursor: pointer;
+}
+.m-row .ms-input:focus{
+ border: none;
+}
+.no-search{
+    text-indent: 4px;
+}
+.input-select option{
+    font-size: 16px;
+}

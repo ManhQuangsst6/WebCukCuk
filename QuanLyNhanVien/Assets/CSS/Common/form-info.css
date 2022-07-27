@@ -1,0 +1,79 @@
+.form-info{
+    background-color: #f0f8ff;
+    width: 700px;
+    margin: 0 auto;
+    height: 100vh;
+    border-radius: 4px;
+}
+.content-info-left{
+    width: 200px;
+    height: 100%;
+    position: relative;
+    padding: 0 20px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+}
+.content-info{
+   
+    display: flex;
+}
+.img-avatar{
+    background-image: url(../../img/default-avatar.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    
+}
+.warning-empty-text{
+    position: absolute;
+    margin-top: 136px;
+    font-size: 12px;
+    text-align: center;
+    margin-right: 20px;
+}
+.content-info-right{
+    width: 600px;
+}
+.info-commom{
+    font-size: 18px;
+    
+}
+.box{
+    width: 80px;
+    height: 4px;
+    background-color: rgb(45, 163, 71);
+    margin: 6px 0;
+}
+.list-infor-input{
+    display: flex;
+    flex-wrap: wrap;
+}
+.input-item input,.input-select{
+    width: 94%;
+    height: 28px;
+    text-indent:10px
+}
+.input-item{
+    width: 50%;
+}
+.title-text-input{
+    font-size: 12px;
+    font-weight: 600;
+    margin: 2px 0 4px;
+}
+.for-info-title{
+    font-weight: 600;
+    padding:10px;
+    font-size: 20px;
+}
+.input-item input:last-child{
+    margin-bottom: 6px;
+}
+.boder-red{
+    border: 1px solid red;
+}
